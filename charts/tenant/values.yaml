@@ -13,7 +13,7 @@ vcluster:
         enabled: false
         selector: 
           labels:
-            workload: tenants
+            kubespaces.io/purpose: tenants
   privateNodes:
     enabled: false
   # -- vcluster isolation
