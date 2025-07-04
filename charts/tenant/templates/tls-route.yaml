@@ -14,7 +14,7 @@ spec:
     namespace: {{ .Values.system.namespace }}
     sectionName: apipassthrough # this is defined in the Gateway in the system namespace
   hostnames:
-  - "api.{{ .Values.tenant.name }}.{{ .Values.tenant.org }}.{{ .Values.tenant.location_short }}.{{ .Values.tenant.cloud }}.{{ .Values.tenant.domain }}"
+  - "{{ .Values.tenant.name }}-{{ .Values.tenant.org }}.api.{{ .Values.tenant.location_short }}.{{ .Values.tenant.cloud }}.{{ .Values.tenant.domain }}"
   rules:
   - backendRefs:
     - name: "{{ .Values.tenant.name }}-{{ .Values.tenant.org }}"
