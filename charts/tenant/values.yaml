@@ -59,7 +59,7 @@ vcluster:
     statefulSet:
       scheduling:
         nodeSelector:
-          workload: tenants
+          kubespaces.io/purpose: tenants
         tolerations:
           - key: "kubernetes.azure.com/scalesetpriority"
             operator: "Equal"
