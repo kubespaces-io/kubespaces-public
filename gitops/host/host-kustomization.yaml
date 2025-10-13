@@ -67,6 +67,11 @@ spec:
     name: kubespaces-public
   path: ./gitops/host/infrastructure/gateways
   prune: false
+  postBuild:
+    substituteFrom:
+      - kind: ConfigMap
+        name: cluster-vars
+        optional: false
   dependsOn:
     - name: istio
   interval: 0m30s
