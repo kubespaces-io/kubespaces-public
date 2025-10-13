@@ -7,7 +7,7 @@ spec:
   gatewayClassName: istio
   listeners:
   - name: apipassthrough
-    hostname: '*.api.euw1.aks.kubespaces.cloud'
+    hostname: "*.api.${zone}.${cloud}.kubespaces.cloud"
     port: 443
     protocol: TLS
     tls:
