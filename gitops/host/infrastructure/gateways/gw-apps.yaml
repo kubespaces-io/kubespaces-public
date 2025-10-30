@@ -13,7 +13,7 @@ spec:
   gatewayClassName: istio
   listeners:
   - name: apps
-    hostname: "*.apps.ne.azure.kubespaces.cloud"
+    hostname: "*.apps.${zone}.${cloud}.kubespaces.cloud"
     port: 443
     protocol: HTTPS
     tls:
